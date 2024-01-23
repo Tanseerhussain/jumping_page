@@ -207,7 +207,7 @@ class _ScreenOneState extends State<ScreenOne> {
                             Navigator.push(context,
                             MaterialPageRoute(builder: (context) => const ScreenTwo()));
                           }, 
-                          child: Text('Next',style: TextStyle(decoration: TextDecoration.underline),)),
+                          child: const Text('Next',style: TextStyle(decoration: TextDecoration.underline),)),
             )
                   ],
                 ),
