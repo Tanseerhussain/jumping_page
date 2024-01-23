@@ -85,6 +85,20 @@ class _HomeScreenState extends State<HomeScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         // next page movement code
         children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: 30,
+              itemBuilder: (context,index){
+              return const ListTile(
+                leading: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        'https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=400'),
+                  ),
+                  title: Text('Tanseer Hussain'),subtitle: Text('Whare are you?'),trailing: Text('10:40'),
+
+              );
+            }),
+          ),
           // next page move 
           Center(
               child: TextButton(
@@ -95,6 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             builder: (context) => const ScreenOne()));
                   },
                   child: const Text('Next Page',style: TextStyle(decoration: TextDecoration.underline),))),
+        
         ],
       ),
     );
